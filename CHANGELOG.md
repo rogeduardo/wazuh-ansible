@@ -1,11 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [v4.0.4]
+## [v4.1.0]
 
 ### Added
 
-- Update to [Wazuh v4.0.4](https://github.com/wazuh/wazuh/blob/v4.0.4/CHANGELOG.md#v404)
+- Update to [Wazuh v4.1.0](https://github.com/wazuh/wazuh/blob/v4.1.0/CHANGELOG.md#v404)
 
 - Support for new Wazuh API config options.
 
