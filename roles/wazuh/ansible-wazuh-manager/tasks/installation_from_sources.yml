@@ -16,7 +16,14 @@
             - autoconf
             - libtool
             - tar
+            - openssl-devel
           state: present
+
+      - name: Install gcc 
+        include_tasks: install_gcc.yml 
+      
+      - name: Install cmake 
+        include_tasks: install_cmake.yml
 
       - name: Removing old files
         file:
