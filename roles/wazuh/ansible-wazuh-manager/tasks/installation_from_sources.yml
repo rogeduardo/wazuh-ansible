@@ -19,8 +19,8 @@
             - openssl-devel
           state: present
 
-      - name: Install gcc 
-        include_tasks: install_gcc.yml 
+          # - name: Install gcc 
+          #   include_tasks: install_gcc.yml 
       
       - name: Install cmake 
         include_tasks: install_cmake.yml
@@ -109,6 +109,8 @@
         changed_when: installation_result == 0
         args:
           chdir: "/tmp/wazuh-{{ wazuh_manager_sources_installation.branch }}"
+        environment:
+          PATH: /usr/local/bin:{{ ansible_env.PATH }}
 
       - name: Cleanup downloaded files
         file:

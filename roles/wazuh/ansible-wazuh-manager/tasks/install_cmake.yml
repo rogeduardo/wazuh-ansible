@@ -7,6 +7,11 @@
   - name: Include CMake install vars 
     include_vars: install_cmake.yml
 
+  - name: Install gcc-c++ dependency
+    package:
+      name: gcc-c++
+      state: present
+
   - name: Download CMake sources
     get_url:
       url: "{{ cmake_download_url }}"
@@ -38,5 +43,4 @@
     file:
       state: absent
       path: "/tmp/cmake-{{ cmake_version }}"
-
 
