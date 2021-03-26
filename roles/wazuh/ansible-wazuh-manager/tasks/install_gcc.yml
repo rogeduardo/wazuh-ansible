@@ -50,6 +50,7 @@
     file:
       src: "/usr/local/gcc-{{ gcc_version }}/bin/g++"
       dest: /usr/bin/c++
+      state: link
     when: gcc_install.changed
 
   - name: Delete installlation files
